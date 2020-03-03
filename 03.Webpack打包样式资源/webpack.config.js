@@ -32,7 +32,7 @@ module.exports = {
           // use 数组中 loader 的执行顺序是从右到左，从下到上的
           // 创建 style 标签，把 js 文件中的样式资源添加进去，再添加到 head 中生效（下面 css-loader 完成的结果）
           'style-loader',
-          // 用与,将 css 编译成 commonJS 模块并加载到 js 文件中，里面内容是样式字符串
+          // 用于,将 css 编译成 commonJS 模块并加载到 js 文件中，里面内容是样式字符串
           'css-loader',
         ],
       },
