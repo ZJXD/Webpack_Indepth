@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/js/index.js',
   output: {
     filename: 'js/built.js',
-    path: resolve(__dirname, 'build'),
+    path: resolve(__dirname, 'build')
   },
   module: {
     rules: [
@@ -16,7 +16,7 @@ module.exports = {
        *  2、全部 js 兼容处理：使用 @babel/polyfill
        *    使用：直接在入口文件引入
        *    问题：只需要解决部分兼容性问题，但是将所有的兼容性代码都导入了，体积太大
-       *  3、按需 js 兼容处理：使用 corejs
+       *  3、按需 js 兼容处理：使用 corejs 安装 npm i core-js -D
        */
       {
         test: /\.js$/,
@@ -32,7 +32,7 @@ module.exports = {
                 useBuiltIns: 'usage',
                 // 指定 core-js 版本
                 corejs: {
-                  version: 3,
+                  version: 3
                 },
                 // 指定兼容性做到哪些浏览器版本
                 targets: {
@@ -40,19 +40,19 @@ module.exports = {
                   firefox: '40',
                   ie: '9',
                   safari: '10',
-                  edge: '17',
-                },
-              },
-            ],
-          ],
-        },
-      },
-    ],
+                  edge: '17'
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
+      template: './src/index.html'
+    })
   ],
-  mode: 'development',
+  mode: 'development'
 }
