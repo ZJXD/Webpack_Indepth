@@ -2,7 +2,7 @@
  * 单入口文件下，通过 js 代码，单独将某一个文件打包成 chunk
  * import 动态导入语法：能将某个文件单独打包
  *
- * 在 import 中加注销，可以根据注释给定打包文件名前缀
+ * 在 import 中加注释，可以根据注释给定打包文件名前缀
  */
 import(/* webpackChunkName: 'test' */ './test.js')
   .then(({ mul, count }) => {

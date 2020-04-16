@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/js/index.js',
   output: {
     filename: 'js/built.js',
-    path: resolve(__dirname, 'build'),
+    path: resolve(__dirname, 'build')
   },
   module: {
     rules: [
@@ -18,21 +18,28 @@ module.exports = {
           // 'style-loader',
           // MiniCssExtractPlugin.loader 用于代替上面的 style-loader，把 css 文件单独提取出来
           MiniCssExtractPlugin.loader,
+          // 缓存 css 文件
+          {
+            loader: 'cache-loader',
+            options: {
+              cacheDirectory: '../../node_modules/.cache/css'
+            }
+          },
           // 将 css 整合到 js 文件中
-          'css-loader',
-        ],
-      },
-    ],
+          'css-loader'
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/index.html'
     }),
     // 提取 css 文件 plugin
     new MiniCssExtractPlugin({
       // 重命名输出文件名
-      filename: 'css/built.css',
-    }),
+      filename: 'css/built.css'
+    })
   ],
-  mode: 'development',
+  mode: 'development'
 }
