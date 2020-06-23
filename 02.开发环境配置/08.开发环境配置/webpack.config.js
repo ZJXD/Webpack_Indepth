@@ -1,6 +1,6 @@
 /**
  * 开发环境配置：
- *  启动命令：
+ *  启动命令(已有配置文件，只需执行 webpack，会寻找配置文件 )：
  *    webpack：打包输出
  *    npx webpack-dev-server：开发运行
  */

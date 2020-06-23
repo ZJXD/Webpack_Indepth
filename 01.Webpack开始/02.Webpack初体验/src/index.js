@@ -1,6 +1,6 @@
 /**
  * index.js： webpack 入口起点文件
- * 一.运行指令：
+ * 一.运行指令(没有配置文件的情况下)：
  *  1、开发环境：webpack ./src/index.js -o ./build/built.js --mode=development
  *    WebPack 会以 ./src/index.js 为入口文件起点，打包后输出到 ./build/built.js 文件
  *    整体打包环境是：development（开发环境）

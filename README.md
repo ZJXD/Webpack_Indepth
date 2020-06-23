@@ -16,6 +16,13 @@ NPM：6.12.0
 1、根据每一个阶段不同建的不同项目  
 2、在根目录下初始化了包管理文件，方便各个子文件中共同使用
 
+### 指令
+
+1、webpack ./src/index.js -o ./build/built.js --mode=development（没有配置文件时指定输入输出）  
+2、webpack ./src/index.js -o ./build/built.pro.js --mode=production（生产环境）  
+3、webpack（有配置文件，打包输出）  
+4、npx webpack-dev-server（有配置文件，开发运行）
+
 ### 文件夹说明
 
 1、01.Webpack 简介：初步认识，为什么需要 Webpack  
