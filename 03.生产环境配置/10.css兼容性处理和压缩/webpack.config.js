@@ -53,7 +53,12 @@ module.exports = {
               ident: 'postcss',
               plugins: () => [
                 // postcss 的 plugins
-                require('postcss-preset-env')(),
+                require('postcss-preset-env')()
+                // pstorem  的配置
+                // require('postcss-pxtorem')({
+                //   rootValue:16, // 默认根元素的 font-size 的值，用于计算
+                //   propList: [*] // 所有属性都转
+                // })
               ],
             },
           },
